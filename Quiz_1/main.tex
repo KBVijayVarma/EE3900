@@ -1,0 +1,231 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{setspace}
+\usepackage{gensymb}
+\singlespacing
+\usepackage[cmex10]{amsmath}
+
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+
+\usepackage{longtable}
+\usepackage{multirow}
+
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+
+\DeclareMathOperator*{\Res}{Res}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+\raggedbottom
+\setlength{\parindent}{0pt}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\vert#1\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\lVert#1\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E[ #1 ]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{subsection}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+\renewcommand{\thefigure}{\theproblem}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{Quiz - 1}
+\author{Vijay Varma - AI20BTECH11012}
+\maketitle
+\newpage
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+%
+Download latex-tikz codes from 
+%
+\begin{lstlisting}
+https://github.com/KBVijayVarma/EE3900/tree/main/Quiz_1
+\end{lstlisting}
+%
+\section*{\textbf{Problem Q 2.30(D)}}
+For each of the following systems, determine whether the system is (1) stable, (2) casual, (3) linear, (4) time invariant.
+
+\textbf{(d)} $T(x[n]) = \sum_{k = n - 1}^{\infty} x[k]$
+\section*{\textbf{Solution}}
+Given $T(x[n]) = \sum_{k = n - 1}^{\infty} x[k]$
+there
+
+\textbf{(1) Stable}
+
+\begin{align}
+    y(n) &= \sum_{k = n - 1}^{\infty} x[k] \\
+    y(n) &= x[k-1] + x[n] + x[n+1] + x[n+2] + \cdots + \infty
+\end{align}
+
+If x[n] is finite also, the above sum y(n) extends to infinity. \\
+
+$\therefore$ The system $T(x[n]) = \sum_{k = n - 1}^{\infty} x[k]$ is \textbf{Unstable}. \\
+
+\textbf{(2) Casual}
+
+\begin{align}
+    y(n) &= \sum_{k = n - 1}^{\infty} x[k] \\
+    y(n) &= x[k-1] + x[n] + x[n+1] + x[n+2] + \cdots + \infty
+\end{align}
+
+Here the output y(n) depends on the future input (x[n+1], x[n+2], $\cdots$). \\
+
+We know that if the output y(n) depends on future inputs then the system is a non casual system. \\
+
+Hence, the given system $T(x[n]) = \sum_{k = n - 1}^{\infty} x[k]$ is a \textbf{Non - Casual} System. \\
+
+\textbf{(3) Linear}
+
+Let us take 
+\begin{align*}
+    y_1(n) = \sum_{k = n - 1}^{\infty} x_1[k] \\
+    y_2(n) = \sum_{k = n - 1}^{\infty} x_2[k] \\
+    x[n] = ax_1[n] + bx_2[n]
+\end{align*}
+
+Given $y(n) = \sum_{k = n - 1}^{\infty} x[k]$
+
+\begin{align}
+    y[n] &= \sum_{k = n - 1}^{\infty} [ax_1[k] + bx_2[k]] \\
+    y[n] &= \sum_{k = n - 1}^{\infty} ax_1[k] + \sum_{k = n - 1}^{\infty} bx_2[k] \\
+    y[n] &= ay_1[n] + by_2[n]
+\end{align}
+
+$\therefore y[n] = ay_1[n] + by_2[n]$
+
+The given system holds the Superposition and Homogenity property.
+
+Hence, the given system $T(x[n]) = \sum_{k = n - 1}^{\infty} x[k]$ is \textbf{Linear}. \\
+
+\textbf{(4) Time Invariant}
+
+Let 
+\begin{align*}
+    y_1(n) = \sum_{k = n - 1}^{\infty} x_1[k] \\ 
+    y_2(n) = \sum_{k = n - 1}^{\infty} x_2[k] \\
+    x_2[n] = x_1[n - t]
+\end{align*}
+
+where t is a real number
+
+Now,
+
+\begin{align}
+    y_2(n) &= \sum_{k = n - 1}^{\infty} x_2[k] \\
+    y_2(n) &= \sum_{k = n - 1}^{\infty} x_1[k - t]
+\end{align}
+
+Let us change the limits of the summation.
+
+Let $k^{'} = k - t$
+
+The lower limit $k = n - 1$ changes to $k^{'} = n - t - 1$.
+
+The upper limit $k = \infty$ changes to $k^{'} = \infty$.
+
+The above summation changes to 
+
+\begin{align}
+    y_2(n) &= \sum_{k^{'} = n - t - 1}^{\infty} x_1[k^{'}]
+\end{align}
+
+Now changing $k^{'}$ with k we get,
+
+\begin{align}
+    y_2(n) &= \sum_{k = n - t - 1}^{\infty} x_1[k] \\
+    y_2(n) &= y_1(n-t)
+\end{align}
+
+Time Invariance can be verified from above.
+
+
+Hence, the given system $T(x[n]) = \sum_{k = n - 1}^{\infty} x[k]$ is \textbf{Time Invariant}.
+
+$\therefore$ The given system $T(x[n]) = \sum_{k = n - 1}^{\infty} x[k]$ is \textbf{Unstable, Non - Casual, Linear, Time Invariant}.
+
+\end{document}
